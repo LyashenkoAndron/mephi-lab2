@@ -6,11 +6,11 @@ import java.util.List;
 import java.util.Optional;
 
 public interface Dao {
-    Person findById(long id);
+    Person findById(int id);
 
     void save(Person person);
 
-    public Person update(int personId, Person person);
+    public void update(int personId, Person person);
 
     void delete(int id);
 }

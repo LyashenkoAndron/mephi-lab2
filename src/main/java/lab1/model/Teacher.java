@@ -1,5 +1,8 @@
 package lab1.model;
 
+import java.util.HashMap;
+import java.util.List;
+
 public class Teacher extends Person {
     private Lesson lesson;
     private int hours;
@@ -14,12 +17,18 @@ public class Teacher extends Person {
         this.hours = hours;
     }
 
+    public static Teacher createTeacher(String name, int age, String phone, Lesson lesson, int hours) {
+        Teacher tc = new Teacher(name, age, phone, lesson, hours);
+        g_id++;
+        return tc;
+    }
+
     @Override
     public String toString() {
         return "Teacher{" +
                 "fullName='" + fullName + '\'' +
-                ", birth_year=" + birth_year +
-                ", phone_number='" + phone_number + '\'' +
+                ", birth_year=" + birthYear +
+                ", phone_number='" + phoneNumber + '\'' +
                 ", lesson='" + lesson + + '\'' +
                 ", hours=" + hours +
                 '}';

@@ -17,12 +17,18 @@ public class Student extends Person {
         this.grades = grades;
     }
 
+    public static Student createStudent(String name, int age, String phone, List<Lesson> lessons, HashMap<Lesson, Double> grades) {
+        Student st = new Student(name, age, phone, lessons, grades);
+        g_id++;
+        return st;
+    }
+
     @Override
     public String toString() {
         return "Student{" +
                 "fullName='" + fullName + '\'' +
-                ", birth_year=" + birth_year +
-                ", phone_number='" + phone_number + '\'' +
+                ", birth_year=" + birthYear +
+                ", phone_number='" + phoneNumber + '\'' +
                 ", lessons=" + lessons + '\'' +
                 ", grades=" + grades +
                 '}';
