@@ -33,8 +33,7 @@ public class Controller implements Runnable {
                     }
                 }
                 Thread.sleep(1000);
-            }
-            catch (Exception e) {
+            } catch (Exception e) {
                 e.printStackTrace();
             }
         }

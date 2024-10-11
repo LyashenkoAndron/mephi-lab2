@@ -29,7 +29,7 @@ public class Teacher extends Person {
                 "fullName='" + fullName + '\'' +
                 ", birth_year=" + birthYear +
                 ", phone_number='" + phoneNumber + '\'' +
-                ", lesson='" + lesson + + '\'' +
+                ", lesson='" + lesson + +'\'' +
                 ", hours=" + hours +
                 '}';
     }

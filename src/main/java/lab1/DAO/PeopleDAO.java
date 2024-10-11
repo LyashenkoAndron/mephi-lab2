@@ -22,8 +22,7 @@ public class PeopleDAO implements Dao {
             if (file.exists()) {
                 return objectMapper.readValue(file, Person.class);
             }
-        }
-        catch (IOException e) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
         return null;
@@ -34,8 +33,7 @@ public class PeopleDAO implements Dao {
         try {
             File file = new File(personDir, person.getId() + ".json");
             objectMapper.writeValue(file, person);
-        }
-        catch (IOException e) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }

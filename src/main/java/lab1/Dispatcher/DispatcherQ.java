@@ -29,8 +29,7 @@ public class DispatcherQ implements Runnable {
                     Teacher teacher = Teacher.createTeacher(command[2], Integer.parseInt(command[3]),
                             command[4], Lesson.valueOf(command[5].toUpperCase()), Integer.parseInt(command[6]));
                     service.savePerson(teacher);
-                }
-                else if(Objects.equals(command[1], "student")) {
+                } else if (Objects.equals(command[1], "student")) {
                     String[] lessons = command[5].split(",");
 
                     // PE,CS,HISTORY
@@ -70,8 +69,7 @@ public class DispatcherQ implements Runnable {
                     Teacher teacher = new Teacher(command[3], Integer.parseInt(command[4]),
                             command[5], Lesson.valueOf(command[6].toUpperCase()), Integer.parseInt(command[7]));
                     service.updatePerson(Integer.parseInt(command[1]), teacher);
-                }
-                else if(Objects.equals(command[2], "student")) {
+                } else if (Objects.equals(command[2], "student")) {
                     String[] lessons = command[6].split(",");
 
                     // PE,CS,HISTORY
@@ -95,7 +93,9 @@ public class DispatcherQ implements Runnable {
                 }
                 break;
 
-
+            default:
+                System.out.println("Invalid command");
+                break;
         }
     }
 
@@ -106,8 +106,7 @@ public class DispatcherQ implements Runnable {
                 String command = queue.take();
                 getCommand(command);
                 Thread.sleep(1000);
-            }
-            catch (Exception e) {
+            } catch (Exception e) {
                 e.printStackTrace();
             }
         }

@@ -7,7 +7,7 @@ import java.io.File;
 @JsonTypeInfo(
         use = JsonTypeInfo.Id.NAME,
         include = JsonTypeInfo.As.PROPERTY,
-        property = "type" // Имя поля, которое будет добавлено в JSON
+        property = "type"
 )
 @JsonSubTypes({
         @JsonSubTypes.Type(value = Teacher.class, name = "teacher"),
