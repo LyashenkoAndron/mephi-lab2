@@ -20,6 +20,7 @@ public class PeopleDAO implements Dao {
         try {
             File file = new File(personDir, id + ".json");
             if (file.exists()) {
+                System.out.println(objectMapper.readValue(file, Person.class).toString());
                 return objectMapper.readValue(file, Person.class);
             }
         } catch (IOException e) {

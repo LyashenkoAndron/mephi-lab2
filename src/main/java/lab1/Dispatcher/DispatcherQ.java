@@ -61,6 +61,7 @@ public class DispatcherQ implements Runnable {
             // hetById 3
             case "getById":
                 service.getPersonById(Integer.parseInt(command[1]));
+
                 break;
 
             // update 3 student Elena 1 888 History,PE,CS PE:5.0,CS:3.1
